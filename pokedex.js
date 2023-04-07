@@ -3,7 +3,7 @@
 console.log('buenas noches bienvenidos');
 
 const pokedex$$ = document.getElementById('pokedex');
-pokedex$$.innerHTML = 'hola amigo';
+//pokedex$$.innerHTML = 'hola amigo';
 
 
 const numPokemons = 150;
@@ -24,6 +24,18 @@ const mapearPokemons = (pokemon) => {
     }))
 }
 
+const draw = (pokemonMapeados) => {
+
+    for(const pokemon of pokemonMapeados){
+        const li$$ = document.createElement('li');
+        li$$.innerHTML = `
+        <h2>${pokemon.nombre}</h2>
+        <img src="${pokemon.imagen}" alt="${pokemon.nombre}">
+        `
+        pokedex$$.appendChild(li$$);
+    }
+}
+
 const init = async () => {
 
     for(let i = 1; i <= numPokemons; i++){
@@ -36,6 +48,7 @@ const init = async () => {
     const pokemonMapeados = mapearPokemons(pokemons);
     console.log(pokemonMapeados);
     // ahora a ver si los pintamos
+    draw(pokemonMapeados)
 
 }
 
