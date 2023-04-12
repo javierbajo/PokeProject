@@ -1,5 +1,4 @@
 
-
 console.log('buenas noches bienvenidos');
 
 const pokedex$$ = document.getElementById('pokedex');
@@ -16,7 +15,6 @@ const get = async (contador) => {
         //console.log(res);
         return res;
 }
-
 const mapearPokemons = (pokemon) => {
     return pokemon.map((pokemon) => ({
         nombre: pokemon.name,
@@ -29,9 +27,10 @@ const draw = (pokemonMapeados) => {
     pokedex$$.innerHTML = "";
     for(const pokemon of pokemonMapeados){
         const li$$ = document.createElement('li');
+        li$$.setAttribute('class','card');
         li$$.innerHTML = `
-        <h2>${pokemon.nombre}</h2>
-        <img src="${pokemon.imagen}" alt="${pokemon.nombre}">
+        <h2 class = 'card-title'>${pokemon.nombre}</h2>
+        <img src="${pokemon.imagen}" alt="${pokemon.nombre}" class = "card-image">
         `
         pokedex$$.appendChild(li$$);
     }
@@ -39,7 +38,7 @@ const draw = (pokemonMapeados) => {
 
 const buscarPokemons = (filtro, pokemonMapeados) => {
     let pokemonFiltrados = pokemonMapeados.filter((pokemon) => pokemon.nombre.toLowerCase().includes(filtro.toLowerCase()));
-    // le mando los pokemos filtrados a la función que pinta
+    // le mando los pokemos filtrados a la función que pinta los pokemons
     console.clear();
     console.log(pokemonFiltrados);
     draw(pokemonFiltrados);
