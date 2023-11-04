@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <!-- iconos de bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Javier Bajo" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Pokédex de Javi Bajo" />
+    <meta name="keywords" content="HTML, CSS, Bootstrap" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>TODO list</title>
+    <link rel="stylesheet" href="./stylesTodolist.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <!-- NavBar -->
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-ligth border-3 border-bottom border-primary"
+      >
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#MenuNavegador"
+            aria-controls="MenuNavegador"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="MenuNavegador">
+            <a href="#" class="navbar-brand">
+              <img src="../images/icon.svg" width="50" alt="Icono Pokédex" />
+            </a>
+            <ul
+              class="navbar-nav d-flex justify-content-center align-items-center"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./todolist/todolist.html"
+                  >Lista de tareas</a
+                >
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Tres</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Cuatro</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+      <!-- Lista de tareas -->
+      <div class="container">
+        <h1>TODO List</h1>
+        <div class="search">
+          <form>
+            <input type="text" placeholder="Add task..." />
+            <button class="btn-add">+</button>
+          </form>
+        </div>
+        <div class="li-container">
+          <ul id="listaTareas"></ul>
+        </div>
+        <div class="empty"></div>
+      </div>
+
+    <script src="./todolist.js"></script>
+    <script src="https://kit.fontawesome.com/5f4d3955d0.js" crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

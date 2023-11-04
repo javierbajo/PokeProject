@@ -45,6 +45,7 @@ const takeInput = (pokemonMapeados) => {
 
 const init = async () => {
 
+    //creo variable local pokemons como array vacío para luego meterle la información de la API
     const pokemons = [];
     // llamar a la función get 150 veces, una para cada URL
     for(let i = 1; i <= numPokemons; i++){
